@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import { createRoot } from "react-dom/client";
+import {BrowserRouter as Router, Routes,Route} from "react-router-dom";
 import Services from './components/pages/Services';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
@@ -12,18 +13,20 @@ function App() {
 
 
   return (
-    <BrowserRouter>
-     
+ 
+       
+        <Router>
         <Navbar />
         <Routes>
-          <Route index path='/' exact component={Home} />
-          <Route exact  path='/services' component={Services} />
-          <Route exact  path='/products' component={Products} />
-          <Route exact  path='/sign-up' component={SignUp} />
+          <Route  path='/'  element={<Home />} />
+          <Route  path='/services' element={<Services />} />
+          <Route  path='/products' element={<Products />} />
+          <Route  path='/sign-up' element={<SignUp />} />
         </Routes>
-  
-      </BrowserRouter>
+        </Router>
+     
   );
 }
 
 export default App;
+
