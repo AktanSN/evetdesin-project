@@ -9,11 +9,7 @@ import SignUp from './components/pages/SignUp';
 
 
 function App() {
-<<<<<<< HEAD
- 
-=======
-  
->>>>>>> 3f537ccfa2449b18a1177f727e1b5dc98abdcd25
+
 
   return (
     <BrowserRouter>
